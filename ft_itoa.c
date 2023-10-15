@@ -6,7 +6,7 @@
 /*   By: dmeirele <dmeirele@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 15:29:55 by dmeirele          #+#    #+#             */
-/*   Updated: 2023/10/11 20:18:16 by dmeirele         ###   ########.fr       */
+/*   Updated: 2023/10/15 12:01:48 by dmeirele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	digit_count(int n)
 	return (len);
 }
 
-char	*negative_number(unsigned int n, int d_count)
+static char	*negative_number(unsigned int n, int d_count)
 {
 	char	*negnbr;
 

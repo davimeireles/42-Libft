@@ -6,13 +6,13 @@
 /*   By: dmeirele <dmeirele@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:10:49 by dmeirele          #+#    #+#             */
-/*   Updated: 2023/10/11 20:23:30 by dmeirele         ###   ########.fr       */
+/*   Updated: 2023/10/15 12:03:54 by dmeirele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_charcmp(char s1, char const *s2)
+static int	ft_charcmp(char s1, char const *s2)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	ft_charcmp(char s1, char const *s2)
 	return (1);
 }
 
-int	start_loop(char const *s1, char const *s2, int size_s1)
+static int	start_loop(char const *s1, char const *s2, int size_s1)
 {
 	int	i;
 
@@ -40,7 +40,7 @@ int	start_loop(char const *s1, char const *s2, int size_s1)
 	return (i);
 }
 
-int	final_loop(char const *s1, char const *s2, int size_s1)
+static int	final_loop(char const *s1, char const *s2, int size_s1)
 {
 	int	i;
 

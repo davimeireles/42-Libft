@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmeirele <dmeirele@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 09:41:11 by dmeirele          #+#    #+#             */
-/*   Updated: 2023/10/15 12:02:40 by dmeirele         ###   ########.fr       */
+/*   Created: 2023/10/15 11:26:43 by dmeirele          #+#    #+#             */
+/*   Updated: 2023/10/15 12:05:03 by dmeirele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	char	*mdest;
-	char	*msrc;
-
-	mdest = (char *)dest;
-	msrc = (char *)src;
-	if (src > dest)
-		ft_memcpy(dest, src, n);
-	if (dest > src)
+	while (lst)
 	{
-		while (n > 0)
-		{
-			mdest[n - 1] = msrc[n - 1];
-			n--;
-		}
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (mdest);
 }

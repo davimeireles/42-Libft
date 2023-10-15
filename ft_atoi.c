@@ -6,13 +6,13 @@
 /*   By: dmeirele <dmeirele@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:10:38 by dmeirele          #+#    #+#             */
-/*   Updated: 2023/10/09 19:41:13 by dmeirele         ###   ########.fr       */
+/*   Updated: 2023/10/15 12:06:41 by dmeirele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_spaces(const char *nptr)
+static int	check_spaces(const char *nptr)
 {
 	if (*nptr == '\t' || *nptr == '\n' || *nptr == '\v' || *nptr == '\f'
 		|| *nptr == '\r' || *nptr == ' ')
@@ -20,7 +20,7 @@ int	check_spaces(const char *nptr)
 	return (0);
 }
 
-int	check_number(const char *nptr)
+static int	check_number(const char *nptr)
 {
 	if (*nptr >= '0' && *nptr <= '9')
 		return (1);
