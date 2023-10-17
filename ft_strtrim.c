@@ -6,7 +6,7 @@
 /*   By: dmeirele <dmeirele@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:10:49 by dmeirele          #+#    #+#             */
-/*   Updated: 2023/10/15 12:03:54 by dmeirele         ###   ########.fr       */
+/*   Updated: 2023/10/16 18:52:20 by dmeirele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	memmall = finpos - incpos + 1;
 	if (memmall < 0)
 		memmall = 0;
-	ptr = malloc(memmall + 1);
+	ptr = ft_calloc(memmall + 1, sizeof(char));
 	if (!ptr)
 		return (NULL);
 	while (incpos <= finpos)

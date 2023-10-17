@@ -6,7 +6,7 @@
 /*   By: dmeirele <dmeirele@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:28:15 by dmeirele          #+#    #+#             */
-/*   Updated: 2023/10/09 18:22:22 by dmeirele         ###   ########.fr       */
+/*   Updated: 2023/10/16 18:52:09 by dmeirele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*ptr;
-	size_t	total_size;
+	unsigned char	*ptr;
+	size_t			i;
+	size_t			total_size;
 
 	total_size = nmemb * size;
 	ptr = malloc(total_size);
 	if (!(ptr))
 		return (NULL);
-	ft_bzero(ptr, total_size);
+	i = 0;
+	while (i < total_size)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: dmeirele <dmeirele@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 15:29:55 by dmeirele          #+#    #+#             */
-/*   Updated: 2023/10/15 12:01:48 by dmeirele         ###   ########.fr       */
+/*   Updated: 2023/10/16 18:51:42 by dmeirele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*negative_number(unsigned int n, int d_count)
 {
 	char	*negnbr;
 
-	negnbr = malloc(d_count + 1 * sizeof(char));
+	negnbr = ft_calloc(d_count + 1, sizeof(char));
 	if (!negnbr)
 		return (NULL);
 	negnbr[d_count] = '\0';
@@ -71,7 +71,7 @@ char	*ft_itoa(int n)
 		return (negnbr);
 	}
 	d_count = digit_count(n);
-	nbr = malloc(d_count + 1 * sizeof(char));
+	nbr = ft_calloc(d_count + 1, sizeof(char));
 	if (!nbr)
 		return (NULL);
 	nbr[d_count] = '\0';
